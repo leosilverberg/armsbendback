@@ -20,9 +20,17 @@ app.use(express.static(path.join(__dirname,'public')));
 var server = require('http').createServer(app).listen(process.env.PORT || 8080);
 console.log("running server on 8080");
 //socketio server
-// var io = require('socket.io').listen(server);
+var io = require('socket.io').listen(server);
 
-// io.sockets.on('connection', function (socket){
-// 	console.log('[SOCKET]client connected');
+io.sockets.on('connection', function (socket){
+    console.log('[SOCKET]client connected');
+    console.log("[SOCKET]client is ",socket.id);
+
+    socket.on('getPhonems', function(msg){
+        console.log("client asking for phonems");
+        io.to(socket.id).emit('phonemsReturn', txt2pho.stringifyPhonemes(txt2pho.toPhonemes(msg)));
+        
+      });
 	
-// })
+});
+
