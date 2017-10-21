@@ -2,7 +2,23 @@ body{
     background-color:#69050D;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+
+        background:
+        linear-gradient(
+            rgba(105,5,13,0.9), 
+            rgba(105,5,13,0.9)
+          ),
+          /* bottom, image */
+       
+        url(laura.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      
 }
+
+
 
 h1{
     letter-spacing: 1px;
@@ -10,18 +26,30 @@ h1{
     text-align: center;
     /* text-transform: uppercase; */
     color:#F8F1F3;
-    font-weight: bold;
+    font-weight: 200;
     font-size:3em;
 }
 
 #inputText{
     font-family: 'Raleway', sans-serif;
-    margin-top:50px;
+    margin-top:30px;
     width:100%;
     text-align: center;
     background-color:rgba(0,0,0,0);
     color:#F8F1F3 !important;
     font-size:3em;
-    border:none;
-    font-weight: bold;
+    border:dotted 1px white;
+    font-weight: 200;
+}
+
+.translator{
+    margin-top:7em;
+}
+
+#header{
+    text-transform: uppercase;
+    color:#F8F1F3;
+    letter-spacing:1px;
+    font-weight:bold;
+    text-align: left;
 }

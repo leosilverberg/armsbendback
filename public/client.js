@@ -1,5 +1,7 @@
 var socket = io();
-socket.emit('getPhonems', 'it feels like I know her, but sometimes my arms bend back.');
+socket.emit('getPhonems', 'it feels like I know her, but sometimes my arms bend back');
+$( ".reversed" ).empty();
+$( ".reversed" ).append( "<h1>"+esrever.reverse("it feels like I know her, but sometimes my arms bend back")+"</h1>" );
 
 socket.on('phonemsReturn', function(data){
         console.log(data);
@@ -14,6 +16,8 @@ $('form').submit(function(){
 });
 
 $('form').on('input',function(e){
+    $( ".reversed" ).empty();
+    $( ".reversed" ).append( "<h1>"+esrever.reverse($('#inputText').val())+"</h1>" );
     socket.emit('getPhonems', $('#inputText').val());
 });
 
