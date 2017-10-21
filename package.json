@@ -1,0 +1,16 @@
+{
+  "name": "armsbendback",
+  "version": "1.0.0",
+  "description": "I feel like I know her, but sometimes my arms bend back.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leo Silverberg",
+  "license": "ISC",
+  "dependencies": {
+    "english-text-to-phonemes": "^0.8.0",
+    "express": "^4.16.2",
+    "socket.io": "^2.0.3"
+  }
+}
